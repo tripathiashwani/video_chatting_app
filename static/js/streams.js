@@ -9,7 +9,7 @@ let localTracks = []
 let remoteUsers = {}
 
 let joinAndDisplayLocalStream = async () => {
-    UID = await client.join(APP_ID, CHANNEL, null)
+    UID = await client.join(APP_ID, CHANNEL, TOKEN)
     localTracks = await AgoraRTC.createMicrophoneAndCameraTracks()
 
     let player = `<div class="video-container" id="user-container-${UID}">
