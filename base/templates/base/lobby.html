@@ -12,8 +12,22 @@
             <p>A group video chat just for you!</p>
         </div>
     </section>
+
+    <form id="form">
+        <div class="form-field">
+            <input type="submit" value="Join stream">
+        </div>
+    </form>
 </main>
 
+<script type="text/javascript">
+    let form=document.getElementById('form')
+    let handleSubmit= async (e) => {
+        e.preventDefault()
+        window.open('/room/','_self')
+    }
+    form.addEventListener('submit', handleSubmit)
+</script>
 
 {% endblock content%}
 
